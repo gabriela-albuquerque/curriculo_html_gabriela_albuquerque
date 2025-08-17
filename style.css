@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  padding: 40px 56px;
+  line-height: 1.6;
+}
+
+.cabecalho {
+  display: flex;
+  margin-bottom: 32px;
+  background-color: lightgray;
+  border-radius: 100px 0 0 100px;
+  padding-right: 40px;
+  img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+  }
+}
+
+/* mask-image */
+.fade-right {
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-repeat: no-repeat;
+  mask-size: cover;
+
+  display: block;
+}
+
+.cabecalho_dados {
+  line-height: 2;
+  margin-left: auto;
+  width: fit-content;
+}
+
+header,
+section {
+  margin-bottom: 40px;
+}
+
+section {
+  hr {
+    margin-bottom: 32px;
+  }
+}
+
+.historico_profissional {
+  em {
+    font-size: small;
+    color: darkslategray;
+  }
+}
+
+.experiencia,
+.project {
+  margin-bottom: 28px;
+}
+
+.stack {
+  font-style: italic;
+}
