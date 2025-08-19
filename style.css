@@ -8,9 +8,14 @@ a {
   color: inherit;
 }
 
+ul {
+  list-style-position: inside;
+}
+
 body {
-  padding: 40px 56px;
+  padding: 40px 80px;
   line-height: 1.6;
+  font-family: Arial, sans-serif;
 }
 
 .cabecalho {
