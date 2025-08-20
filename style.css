@@ -8,6 +8,10 @@ a {
   color: inherit;
 }
 
+a:hover {
+  cursor: pointer;
+}
+
 ul {
   list-style-position: inside;
 }
@@ -63,6 +67,11 @@ body {
   width: fit-content;
 }
 
+.visually-hidden {
+  position: absolute;
+  left: -9999px; /* Fora da tela */
+}
+
 header,
 section {
   margin-bottom: 40px;
@@ -88,4 +97,50 @@ section {
 
 .stack {
   font-style: italic;
+}
+
+.screen-only {
+  display: inline;
+}
+
+@media print {
+  .cabecalho {
+    background: none !important;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .cabecalho img {
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .visually-hidden {
+    position: static;
+    left: auto;
+    display: inline;
+  }
+
+  @page {
+    size: A4;
+    margin: 1.5cm;
+  }
+
+  body {
+    padding: 0;
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+
+  .screen-only {
+    display: none !important;
+  }
+
+  .formacao {
+    page-break-inside: avoid;
+  }
 }
